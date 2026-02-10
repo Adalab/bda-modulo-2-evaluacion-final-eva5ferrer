@@ -37,7 +37,7 @@ INSERT INTO generos (nombre) VALUES
 SELECT * FROM generos; -- Compruebo que se ha creado correctamente
 
 -- 3.2: Inserto los datos de las películas en la tabla "peliculas": 
--- Introduzco los valores sacado de Python de las columnas: titulo, año, duracion y adultos. 
+-- Introduzco los valores sacado de Python de las columnas: titulo, año, duracion, adultos e id_genero. 
 
 INSERT INTO peliculas (titulo, año, duracion, adultos, id_genero) VALUES 
 ('The Godfather', 1972, 175, False, 1),
