@@ -1,18 +1,19 @@
 /* ******************************************************************************************
 							 EJERCICIO 1 (EVA FERRER)
 ****************************************************************************************** */
+-- ... CONTINUACIÓN FASE 2  
 
--- ******** CONTINUACIÓN FASE 2: CREACIÓN BASE DE DATOS (CREACIÓN DE LAS TABLAS) ************
+-- ********** FASE 2B: CREACIÓN BASE DE DATOS (CREACIÓN DE LAS TABLAS) ************
 
--- He creado la base de datos "peliculas" a través de Python.
+-- Uso el esquema 'peliculas' previamente creado con Python (Fase 2A) en el archivo jupyter: 'ejercicio-1-python-API.ipynb'.
 USE peliculas;
 
--- 2.1: Creo la tabla de géneros:
+-- Creo la tabla de 'generos':
 CREATE TABLE IF NOT EXISTS generos (
   id_genero INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(15) NOT NULL);
 
--- 2.2: Creo la tabla de peliculas con la clave foranea 'id_genero':
+-- Creo la tabla de 'peliculas' con la clave foranea 'id_genero':
 CREATE TABLE IF NOT EXISTS peliculas (
   id_pelicula INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   titulo VARCHAR(50) NOT NULL,
@@ -28,16 +29,16 @@ CREATE TABLE IF NOT EXISTS peliculas (
 
 -- ************ FASE 3: INSERCIÓN DE DATOS EN LA BASE DE DATOS: ************  
 
--- 3.1: Inserto los géneros en la tabla "generos": 
--- Quiero ver qué id le da SQL a cada género. Introduzco los tipos de genero que he sacado de Python. 
+-- Inserto los géneros en la tabla "generos": 
+	-- Introduzco los tipos de genero que he sacado de Python anteriormente en la Fase 2A.  
 INSERT INTO generos (nombre) VALUES
 ('Crimen'), ('Drama'), ('Acción'), ('Ciencia ficción'), ('Romance'), ('Bélico'), ('Thriller'), ('Musical'),
  ('Fantasía'), ('Aventura'), ('Animación'), ('Biografía'), ('Terror'), ('Suspense'), ('Comedia'), ('Western');
 
-SELECT * FROM generos; -- Compruebo que se ha creado correctamente
+SELECT * FROM generos; -- Compruebo que se ha creado correctamente y con los ids correctos.
 
--- 3.2: Inserto los datos de las películas en la tabla "peliculas": 
--- Introduzco los valores sacado de Python de las columnas: titulo, año, duracion, adultos e id_genero. 
+-- Inserto los datos de las películas en la tabla "peliculas": 
+	-- Introduzco los valores sacado de Python (Fase 2A) de las columnas: titulo, año, duracion, adultos e id_genero. 
 
 INSERT INTO peliculas (titulo, año, duracion, adultos, id_genero) VALUES 
 ('The Godfather', 1972, 175, False, 1),
