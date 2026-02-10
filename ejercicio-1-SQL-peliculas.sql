@@ -176,10 +176,17 @@ LIMIT 1;
     WHERE año = (SELECT MIN(año) FROM peliculas);
 
 -- 4.5 Muestra el promedio de duración de las películas agrupado por género.
--- Tengo que hacer una subconsulta dentro del select para que me salgan los nombres de los géneros.
+-- Hago una subconsulta dentro del select para que me salgan los nombres de los géneros.
 SELECT (SELECT nombre FROM generos AS g WHERE g.id_genero = p.id_genero) AS nombre_genero, ROUND(AVG(duracion),2) AS promedio_duracion
 FROM peliculas AS p
 GROUP BY id_genero;
+
+	-- Tambien puedo usar un inner join: 
+	SELECT g.nombre AS nombre_genero, ROUND(AVG(duracion),2) AS promedio_duracion
+    FROM generos AS g
+    INNER JOIN peliculas AS p
+    USING (id_genero)
+    GROUP BY id_genero;
 
 -- 4.6 ¿Cuántas películas por año se han registrado en la base de datos? Ordena de mayor a menor.
 SELECT año, COUNT(id_pelicula) AS N_peliculas
@@ -201,7 +208,15 @@ FROM peliculas AS p
 GROUP BY id_genero
 ORDER BY N_peliculas DESC;
 
--- 4.9 Muestra todas las películas cuyo título contenga la palabra "Godfather" (puedes usar cualquier palabra).
+	-- Opcion con left join por ejemplo (aunque el resultado sería el mismo con un inner join):
+    SELECT g.nombre AS nombre_genero, COUNT(id_pelicula) AS N_peliculas
+	FROM generos AS g
+    LEFT JOIN peliculas AS p
+    USING (id_genero)
+    GROUP BY id_genero
+    ORDER BY N_peliculas DESC;
+    
+	-- 4.9 Muestra todas las películas cuyo título contenga la palabra "Godfather" (puedes usar cualquier palabra).
 SELECT titulo 
 FROM peliculas
 WHERE titulo LIKE '%Godfather%';
