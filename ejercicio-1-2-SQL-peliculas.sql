@@ -5,7 +5,7 @@
 
 -- ********** FASE 2B: CREACIÓN BASE DE DATOS (CREACIÓN DE LAS TABLAS) ************
 
--- Uso el esquema 'peliculas' previamente creado con Python (Fase 2A) en el archivo jupyter: 'ejercicio-1-python-API.ipynb'.
+-- Uso el esquema 'peliculas' previamente creado con Python (Fase 2A) en el archivo jupyter: 'ejercicio-1-1-python-API.ipynb'.
 USE peliculas;
 
 -- Creo la tabla de 'generos':
