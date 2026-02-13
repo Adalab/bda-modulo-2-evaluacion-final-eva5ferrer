@@ -1,10 +1,10 @@
 # 👩‍💻 Modulo 2 - Final assignment (APIs & SQL) - Eva Ferrer
 ## Objective 
-The purpose of this assignment is to practice all the skills learnt during module 2. These involve extracting data from publichAPIs using Python language via Visual Studio Code (Jupyter Notebook) and working with/sending queries to databases in MySQL Workbench. 
+The purpose of this assignment is to practice all the skills learnt during module 2. These involve extracting data from public APIs using Python language via Visual Studio Code (Jupyter Notebook) and working with/sending queries to databases in MySQL Workbench. 
 
 The assignment is divided in two exercises:
-- ** Exercise 1: Extract data from an API and build a database
-- ** Exercise 2: Working with the database "Sakila"
+- **Exercise 1:** Extract data from an API and build a database
+- **Exercise 2:** Working with the database "Sakila"
 
 ## 📁 Repository structure
 ```text
@@ -36,18 +36,18 @@ The exercise 1 is divided in 4 phases:
     - Instructions: Follow the instructions listed in the SQL file. In this phase we will be using different queries to get the required information from the database.
 
 ## Exercise 2: 
-The objective of this exercise is to get familiar with processing some queries throught MySQL Workbench. All the queries have been done to the same database called "Sakila". This database was already created by Adalab.
+The objective of this exercise is to get familiar with processing some queries through MySQL Workbench. All the queries have been done to the same database called "Sakila". This database was already created by Adalab.
 - File name: ejercicio-2-SQL-sakila.sql
-- Instructions: Follow the instructions listed in the SQL file. There several questions listed in which an associated query is lsited below. In some cases, more than one query option has been included, in which the outcome is the same. 
+- Instructions: Follow the instructions listed in the SQL file. There are several questions listed in which an associated SQL query is listed below. In some cases, more than one query option has been included (with the same outcome). 
 
-## 🛠️ Tools/Technical skills required:
+## 🛠️ Tools/technical skills required:
 - **Python language**
 - **Jupyter Notebook**
 - **Visual Studio Code**
 - **MySQL Server**
 - **MySQL Workbench**
 
-# How to clone the repository
+## How to clone the repository
 Using Visual Studio Code, open the folder where you want to clone the repository and execute the below:
    ```bash
    git clone https://github.com/Adalab/bda-modulo-2-evaluacion-final-eva5ferrer.git
